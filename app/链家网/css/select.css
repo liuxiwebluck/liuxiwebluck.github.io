@@ -1,0 +1,32 @@
+*{
+    margin:0;
+    padding:0;
+}
+.head{
+    background: #00ae66;
+    height: 50px;
+    color: #fff;
+
+}
+.head div div{
+    font-size: 24px;
+    margin-top: 10px;
+}
+.cont{
+  background: #ccc;
+    color: #000;
+    height:30px;
+    padding: 5px 0;
+}
+.conte{
+   height: 40px;
+    color: #000;
+    padding:10px 0;
+    font-size: 20px;
+}
+.contf{
+    border-bottom: 1px solid #ccc;
+    height:50px;
+    font-size: 24px;
+    margin-top: 20px;
+}

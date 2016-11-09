@@ -1,0 +1,74 @@
+*{
+    font-family: 微软雅黑;
+
+}
+a{
+    color:#fff;
+}
+a:hover,a:focus{
+    color: #fff;
+    text-decoration: none;
+}
+.header-common{
+    height: 50px;
+    background: #00ae66;
+    margin: 0 -15px;
+    position: relative;
+}
+.logo{
+    width: 145px;
+    height:20px;
+    position: absolute;
+    left: 10px;
+    top: 15px;
+}
+.logo img{
+    width: 145px;
+    heigth:20px;
+}
+.main-body a{
+    color: #000;
+}
+.singleLine{
+    margin: 0;
+}
+.left,.right,.last{
+    border-bottom:1px solid #d3d3d3;
+    height:50px;
+    line-height: 50px;
+}
+.msg{
+    line-height:50px;
+}
+.borderless{
+    border:none;
+    height:48px;
+    box-shadow:none;
+}
+.btn-row{
+    margin:10px;
+}
+.btn-row button{
+    background: #00ae66;
+    border-radius: 0;
+}
+.btn-row :nth-child(2){
+    text-align: right;
+}
+.txt-green{
+    color: #39ac93;
+}
+/*---------------------------*/
+.tabs{
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    padding:0 15px;
+}
+.border div{
+    height:5px;
+    background: #d1d1d1;
+}
+.border div.active{
+    background: #39ac6a;
+}

@@ -1,0 +1,150 @@
+*{
+    font-family:微软雅黑;
+}
+a{
+    color:#fff;
+}
+a:hover,a:focus{
+    color:#fff;
+    text-decoration:none;
+}
+.header{
+    height: 50px;
+    background: #00ae66;
+    margin: 0 -15px;
+    position: relative;
+    /*margin-bottom: 10px;*/
+}
+.header_label{
+    margin-top: 15px;
+    cursor: pointer;/*鼠标移到位置变成手型*/
+}
+.logo{
+    width: 145px;
+    height: 20px;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+
+.options{
+    margin-top: 5px;
+    text-align: center;
+    color: #fff;
+}
+.options>ul{
+    margin-left: 10px;
+
+}
+.options>ul>li>a{
+    color: #fff;
+}
+.two{
+    height: 70px;
+    background:#f4f4f4 ;
+}
+.row-three{
+    height:30px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.row-three input{
+    border-radius:0;
+}
+.five{
+    height: 50px;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+.lizd{
+    height: 49px;
+    border-right: 1px solid #ccc;
+    text-align: center;
+}
+.spa{
+    font-size: 20px;
+    line-height: 49px;
+}
+.hot-rooms>.hot-header{
+    height: 48px;
+    line-height: 48px;
+    padding-left: 15px;
+    border-bottom: 1px solid #c5c5c5;
+}
+.hot-rooms>.hot-list>.media{
+    padding:14px 11px;
+    border-bottom: 1px solid #c5c5c5;
+}
+.hot-rooms>.hot-list .media-heading{
+    font-weight: bolder;
+    margin-bottom: 0;
+}
+.hot-rooms>.hot-list .media-body>p{
+    margin:0;
+    font-size: 12px;
+}
+.hot-rooms>.hot-list .media-body .labe{
+    margin-top:4px;
+    display: inline-block;
+}
+/*---------------------------------*/
+.feront{
+    height: 254px;
+    background:url("../images/bg1.jpg") no-repeat;
+    background-size: cover;
+    position:relative;
+}
+.fenont{
+    position:absolute;
+    top:40%;
+    left:45%;
+
+
+    width:50px;
+    height:50px;
+    border-radius:50% 50%;
+    background-color:rgba(0,0,0,0.2);
+    text-align: center;
+    color: #ffffff;
+    font-size: 24px;
+    padding-top: 5px;
+
+}
+.forw{
+    position:absolute;
+    top:70%;
+    left:35%;
+    background: #00ae66;
+    color: #fff;
+}
+.forww{
+    position:absolute;
+    top:70%;
+    left:55%;
+    background: #00ae66;
+    color: #fff;
+}
+.down{
+    height: 50px;
+    border-bottom: 1px solid #ccc;
+    color: #ccc;
+    padding-top: 20px;
+}
+.down span{
+    float: right;
+    margin-right: 30px;
+}
+.floee{
+    height: 50px;
+    border-bottom: 1px solid #ccc;
+    color: #ccc;
+    padding-top: 20px;
+
+}
+.floee span{
+    float: right;
+    margin-right: 30px;
+}
+
+

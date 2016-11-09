@@ -1,0 +1,78 @@
+*{
+    font-family:微软雅黑;
+}
+a{
+    color:#fff;
+}
+a:hover,a:focus{
+    color:#fff;
+    text-decoration:none;
+}
+.header{
+    height: 50px;
+    background: #00ae66;
+    margin: 0 -15px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.header_label{
+    margin-top: 15px;
+    cursor: pointer;
+}
+.logo{
+    width: 145px;
+    height: 20px;
+    position: absolute;
+    left: 10px;
+    top: 15px;
+}
+div#two-row>img{
+    width: 100%;
+}
+#pic{
+    border-bottom: 1px solid #ebebeb;
+    border-top: 1px solid #ebebeb;
+    background-color: #f9f9f9;
+}
+#pic>div>div{
+    padding: 18px 5px 0 0;
+}
+#pic>div>div:nth-child(2){
+    border-left: 1px solid #dcdcdc;
+}
+/*第三行*/
+#introduce{
+    border-bottom: 1px solid #dcdcdc;
+}
+#introduce>div{
+    margin: 10px 0;
+    border-right: 1px solid #dcdcdc;
+}
+#introduce>div:last-child{
+    border-right: none;
+}
+#introduce>div>ul>li:nth-child(2){
+    color: #de6843;
+}
+
+#house_info>div.row{
+    height: 50px;
+    border-bottom: 1px solid #dcdcdc;
+    line-height: 50px;
+}
+.text{
+    border:1px solid;
+    padding: 1px 5px;
+}
+.text-orange{
+    color: orange;
+    border-color: orange;
+}
+.text-blue{
+    color: blue;
+    border-color: blue;
+}
+.text-green{
+    color: green;
+    border-color: green;
+}

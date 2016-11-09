@@ -1,0 +1,39 @@
+*{
+    margin:0;
+    padding:0;
+}
+.rorw{
+
+    background-color: #fff;
+    color: #0f0f0f;
+    text-align: center;
+    font-size: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.rorw div{
+    height: 50px;
+    border-right: 1px solid #ccc;
+    padding-top: 15px;
+}
+.rorw :nth-child(3){
+
+    font-size:10px;
+    color: #00ae66;
+}
+.clas{
+    height: 30px;
+    border:1px solid #cccccc;
+}
+.clas1{
+    padding-top: 5px;
+}
+.down{
+    height: 50px;
+    border: 1px solid #ccc;
+
+}
+.down button{
+    margin: 5px;
+
+
+}
