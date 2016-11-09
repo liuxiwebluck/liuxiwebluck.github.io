@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	h1{
+		color:red;}
+</style>
+</head>
+
+<body>
+<h1>1:00:00</h1>
+<button onClick="start()">开始</button><button onClick="end()">停止</button>
+<script>
+	var res=prompt("倒计时开始时间","1:00:00");
+	var h1=document.getElementsByTagName("h1")[0];
+	h1.innerHTML=res;
+	
+	
+	function show(){
+		//获得数据
+		var time=h1.innerHTML;
+		
+		console.log(time.split(":"));
+		var hour=parseInt(time.split(":")[0]);
+		var minute=parseInt(time.split(":")[1]);
+		var sec=parseInt(time.split(":")[2]);
+		
+		
+		//处理数据
+		
+		if(hour==0 && minute==0 && sec==0){
+			return;
+			}
+		
+		
+		
+		if(minute==0 && sec==0){
+			hour--;
+			minute=59;
+			sec=60;	
+		}
+		
+		
+		if(sec==0){
+			minute--;
+			sec=60;	
+		}
+		
+		
+		
+		
+		sec--;
+		
+		
+		
+		//展示数据
+		
+		if(sec<10){
+			sec="0"+sec;	
+		}
+		h1.innerHTML=hour+":"+minute+":"+sec;
+		
+	}
+	
+	
+	function start(){
+		timeID=setInterval("show()",1000)	
+	}
+	
+	function end(){
+		clearInterval(timeID);
+	}
+	
+</script>
+</body>
+</html>

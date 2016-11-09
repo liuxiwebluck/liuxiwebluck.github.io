@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<canvas width="600" height="600"></canvas>
+	<script type="text/javascript">
+	var color="gray";
+	var color1="gray";
+	var color2="gray";
+	var text="";
+    var can=document.getElementsByTagName("canvas")[0];
+    var mc=can.getContext("2d");
+    function show(){
+      mc.clearRect(0,0,600,600);
+      var date=new Date();
+      var sec=date.getSeconds();
+      if(sec%3==0){
+      	color="red";
+      	color1="gray";
+      	color2="gray";
+      	text="红灯停";
+      }else if(sec%3==1){
+      	color="gray";
+      	color1="yellow";
+      	color2="gray";
+      	text="黄灯亮了等一等";
+      }else if(sec%3==2){
+      	color="gray";
+      	color1="gray";
+      	color2="green";
+      	text="绿灯行";
+
+      }
+      shu();
+    }
+    setInterval("show()",1000);
+   function shu(){
+    	mc.fillStyle="#000";
+    mc.fillRect(0,0,100,300);
+    mc.beginPath();
+    mc.fillStyle=color;
+    mc.arc(50,50,40,0,Math.PI*2);
+    mc.fill();
+    mc.closePath();
+     mc.beginPath();
+    mc.fillStyle=color1;
+    mc.arc(50,150,40,0,Math.PI*2);
+    mc.fill();
+    mc.closePath();
+     mc.beginPath();
+    mc.fillStyle=color2;
+    mc.arc(50,250,40,0,Math.PI*2);
+    mc.fill();
+    mc.closePath();
+    mc.font="bold 40px 楷体"
+    mc.strokeText(text,0,400);
+    }
+    
+	</script>
+</body>
+</html>

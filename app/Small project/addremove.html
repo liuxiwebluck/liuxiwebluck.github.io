@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>anser</title>
+	<style>
+		table{
+			border:1px solid black;
+			width: 500px;
+			border-collapse: collapse;
+		}
+		table tr td{
+			width: 120px;
+			height: 30px;
+			border:1px solid black;
+		}
+		table tr td.one{
+			width: 30px
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tbody id="tab">
+			<tr>
+				<td class="one"><input type="checkbox"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="one"><input type="checkbox"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="one"><input type="checkbox"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="one"><input type="checkbox"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="one"><input type="checkbox"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr><tr>
+				<td class="one"><input type="checkbox"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<button id="add">添加</button>
+	<button id="del">删除</button>
+</body>
+<script type="text/javascript">
+	var trs=document.getElementsByTagName("tr");
+	var firstTr=trs[0];
+	
+	var tab=document.getElementById("tab");
+	
+	
+	//获取按钮节点
+	var add=document.getElementById("add");
+	var del=document.getElementById("del");
+	//绑定事件
+
+	add.onclick=function(){
+		var cloneTr=firstTr.cloneNode(true);
+		tab.appendChild(cloneTr);
+	}
+
+	//删除一行
+	del.onclick=function(){
+		var inputs=document.getElementsByTagName("input");
+		for(var i=inputs.length-1;i>=0;i--){
+			if(inputs[i].checked==true){
+				var aa=inputs[i].parentNode.parentNode;
+				tab.removeChild(aa);
+		
+			}
+		}
+	}
+</script>
+</html>

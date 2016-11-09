@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<center>
+		<form>
+			<input type="text" name="res"id="res"readonly="readonly"/><br>
+			<input type="button"id="btn1"value="1"/>
+			<input type="button"id="btn2"value="2"/>
+			<input type="button"id="btn3"value="3"/>
+			<input type="button"id="btnAdd"value="+"/><br>
+			<input type="button"id="btn4"value="4"/>
+			<input type="button"id="btn5"value="5"/>
+			<input type="button"id="btn6"value="6"/>
+			<input type="button"id="btnSub"value="-"/><br>
+			<input type="button"id="btn7"value="7"/>
+			<input type="button"id="btn8"value="8"/>
+			<input type="button"id="btn9"value="9"/>
+			<input type="button"id="btnMul"value="*"/><br>
+			<input type="button"id="btnPoint"value="."/>
+			<input type="button"id="btn0"value="0"/>
+			<input type="button"id="btnSym"value="="/>
+			<input type="button"id="btnDiv"value="/"/><br>
+			<input type="button"id="btnC"value="C"/>
+			
+		</form>
+	</center>
+	<script type="text/javascript"language="javascript">
+		var firstNum="";//操作符之前的数字
+		var ifPressOptBtn=false;//是否按过操作符+-8/，没有false,有rtue
+		var optBtnValue="";//存储操作按钮的值
+		for(var i=0;i<=9;i++){
+			var btnObject=document.getElementById("btn"+i);
+			//document.write(btnObject.value);
+			
+			btnObject.addEventListener('click', 
+					function(){
+				if(ifPressOptBtn==false){
+					if(document.getElementById("res").value.length==1&&document.getElementById("res").value=="0"){
+						document.getElementById("res").value=this.value;
+					}else
+					document.getElementById("res").value+=this.value;
+				}else{
+					document.getElementById("res").value=this.value;
+					ifPressOptBtn=false;
+				}
+				}, false);
+		}	
+		var btnPointObject=document.getElementById("btnPoint");
+		
+		btnPointObject.addEventListener('click', 
+				function(){
+				var res=/\./;
+				var bool=res.test(document.getElementById("res").value);
+				if(!bool){
+	if(document.getElementById("res").value.length==0)
+		document.getElementById("res").value="0.";
+	else	
+				document.getElementById("res").value+=this.value;
+				}}, 
+		false);
+		
+		//运算操作符
+	document.getElementById("btnAdd").addEventListener('click', 
+			function(){
+				ifPressOptBtn=true;
+				optBtnValue=this.value;
+				firstNum=document.getElementById("res").value;
+	}, false);
+	document.getElementById("btnSub").addEventListener('click', 
+			function(){
+				ifPressOptBtn=true;
+				optBtnValue=this.value;
+				firstNum=document.getElementById("res").value;
+	}, false);
+	document.getElementById("btnMul").addEventListener('click', 
+			function(){
+				ifPressOptBtn=true;
+				optBtnValue=this.value;
+				firstNum=document.getElementById("res").value;
+	}, false);
+	document.getElementById("btnDiv").addEventListener('click', 
+			function(){
+				ifPressOptBtn=true;
+				optBtnValue=this.value;
+				firstNum=document.getElementById("res").value;
+	}, false);
+		
+	//等号操作符
+	document.getElementById("btnSym").addEventListener('click', 
+			function(){
+				var resObject=document.getElementById("res");
+				var result =eval(firstNum+optBtnValue+resObject.value);
+				resObject.value=result;
+	}, false);
+	document.getElementById("btnC").addEventListener('click', 
+			function(){
+				document.getElementById("res").value="0";
+				firstNum="";//操作符之前的数字
+				 ifPressOptBtn=false;//是否按过操作符+-8/，没有false,有rtue
+				 optBtnValue="";//存储操作按钮的值
+				
+	}, false);
+	
+		
+	</script>
+</body>
+</html>

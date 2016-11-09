@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		//jQuery
+		/*$("#btn?").bind('',function(){
+
+		});
+		//JS
+		var btn = document.getElementById(id);
+		btn.addEventListener("", function(){
+
+		},false);*/
+	</script>
+</head>
+<body>
+	<center>
+		<form>
+			<input type="text" name="res"id="res"readonly="readonly"/><br>
+			<input type="button"id="btn1"value="1"/>
+			<input type="button"id="btn2"value="2"/>
+			<input type="button"id="btn3"value="3"/>
+			<input type="button"id="btnAdd"value="+" class="btnF" /><br>
+			<input type="button"id="btn4"value="4"/>
+			<input type="button"id="btn5"value="5"/>
+			<input type="button"id="btn6"value="6"/>
+			<input type="button"id="btnSub"value="-" class="btnF"/><br>
+			<input type="button"id="btn7"value="7"/>
+			<input type="button"id="btn8"value="8"/>
+			<input type="button"id="btn9"value="9"/>
+			<input type="button"id="btnMul"value="*" class="btnF"/><br>
+			<input type="button"id="btnPoint"value="."/>
+			<input type="button"id="btn0"value="0"/>
+			<input type="button"id="btnSym"value="="/>
+			<input type="button"id="btnDiv"value="/" class="btnF"/><br>
+			<input type="button"id="btnC"value="C"/>
+			
+		</form>
+	</center>
+	<script type="text/javascript">
+		var firstNum="";//操作符之前的数字
+		var state=false;//是否按过操作符+-8/，没有false,有rtue
+		var btnValue="";//存储操作按钮的值
+		for(var i=0;i<=9;i++){
+			$("#btn"+i).bind("click",function(){
+				var v = $(this).val();
+				var r = $("#res").val();
+				if(state==false){
+					if(r=="0"){//  0.
+						if(v==0){
+							r=0;
+						}else{
+							r=v;
+						}
+					}else{
+						r += v;
+					}
+				}else{
+					r = v;
+					state = false;
+				}	
+				$("#res").val(r);
+			});
+		}
+		//.
+		$("#btnPoint").bind("click",function(){
+			var reg = /\./;
+			var v = $(this).val();
+			var r = $("#res").val();
+			if(!reg.test(r)){
+				if(r=="")
+				r="0";			
+				r += v;
+				$("#res").val(r);
+			}
+		});
+		//+ - * /
+		//1.保存之前输入的值
+		//2.符号进行保存
+		//3.符号状态发生改变
+		$(".btnF").bind("click",function(){
+			var v = $(this).val();
+			if(v!=""){
+				btnValue = v;//储存符号
+				var r = $("#res").val();
+				firstNum = r;//将第一次的值保存
+				state = true;//改变状态
+			}
+		});
+		//=
+		$("#btnSym").bind("click",function(){
+			var r = $("#res").val();
+			var str = firstNum + btnValue + r;
+			var res = eval(str);
+			$("#res").val(res);
+		});
+		//C
+		$("#btnC").bind("click",function(){
+			$("#res").val(null);
+			firstNum = "";
+			btnValue ="";
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+/* CSS Document */
+/*--提货须知--*/
+.herad{ background-color:#fbf9fa;}
+.herad .herad1{  overflow:hidden; width:1200px; margin:0 auto;}
+.herad1 .logo{ width:400px; float:left; height:114px;  }
+.herad1 .logo1{ width:400px; height:70px;}
+.logo1 #poso{ margin-top:5px; float:left;}
+.logo1 .poso1{ margin-left:85px; font-size:24px; color:#5a0200; font-weight:bold; padding-top:29px;}
+.herad1 .logo2{ width:400px; height:44px;}
+.logo2 .logo3{ width:60px; height:44px;}
+.logo3 .pobo{ text-align:center; color:#5a0200;}
+.logo3 .pobo1{ text-align:center; color:#5a0200; font-size:9px;}
+.logo2 .logo4{ width:340px; height:44px; float:right; padding-left:5px; font-size:18px;}
+.herad1 .cen{ width:250px; float:left; margin-left:50px; height:114px;}
+.cen .cen1{ width:70px; height:114px; float:left; }
+.cen1 #ce{ margin-top:15px; margin-left:4px; }
+.cen1 .ce1{ font-size:16px; font-weight:bold;}
+.cen .cen2{ width:110px; height:114px; float:left; }
+.cen2 #ce2{ margin-top:15px; margin-left:15px;}
+.cen2 .ce3{ font-size:16px; font-weight:bold; text-align:center; margin-top:5px;}
+.cen .cen3{ width:70px; height:114px; margin-left:180px; }
+.cen3 #ce4{margin-top:15px; margin-left:4px;}
+.cen3 .ce5{font-size:16px; font-weight:bold;}
+.herad1 .down{ width:400px; margin-left:800px; height:114px;}
+.down #do1{ float:right; margin-top:4px;}
+.down .do{ font-weight:bold; margin-left:260px; padding-top:15px;}
+.center{ height:486px; border-top:1px solid #000; background-color:#fffdee; background:url(../images/xsa.png) no-repeat center;}
+.center .zd{ height:486px; width:1200px; margin:0 auto;}
+.zd .zd1{ height:30px; width:1200px; background-color:#d0d0d0;}
+.zd .zd2{ height:30px; width:1100px; margin:0 auto;}
+.zd1 .zd3{ float:left; color:#82413f; font-size:18px; font-weight:bold;}
+.zd1 .zd4{ float:left; color:#82413f; margin-left:170px; font-size:18px; font-weight:bold;}
+.zd #ce5{ float:right;}
+.zd #ce6{ float:right; margin-top:50px;}
+.zd .zz{ height:450px; width:700px;}
+.zz .z1{ height:118px; width:700px; border-bottom:1px solid #000; }
+.z1 .c1{ font-size:18px; margin-top:20px;}
+.z1 em{ color:#F00; font-size:18px; }
+.zz .z2{ height:58px; width:700px; border-bottom:1px solid #000; }
+.z2 .c2{ font-size:18px;}
+.zz .z3{ height:38px; width:700px; border-bottom:1px solid #000; }
+.z3 .c3{ font-size:18px;}
+.z3 em{ color:#F00; font-size:18px;}
+/*--其他提货--*/
+.zd .cc{ height:450px; width:700px;}
+.zd .c1{ height:100px; width:700px;}
+.c1 #cz{ float:left; margin-top:20px; margin-left:10px;}
+.c1 .zx{ margin-left:80px; color:#431f0f; font-size:16px; padding-top:17px;}
+/*--提货步骤--*/
+.zd .zs{ height:450px; width:700px;}
+.zs .zf{ height:80px; width:700px; border-bottom:1px solid #CCC;}
+.zf #zf2{ float:left; margin-top:20px; margin-left:40px;}
+.zf .zf1{ font-size:16px; margin-left:110px; padding-top:20px;}
+.zs .ff{ height:80px; width:700px; border-bottom:1px solid #000;}
+.ff #ff2{ float:left; margin-top:20px; margin-left:40px;}
+.ff .ff1{ font-size:16px; margin-left:110px; padding-top:20px;}
+/*--在线提货--*/
+.zd .dsa{ height:450px; width:700px; }
+.dsa .dsa1{ height:250px; width:700px;}
+.dsa1 li{ height:62px; width:700px;}
+.dsa1 li .zda{ float:left; margin-left:200px; margin-top:20px;}
+.dsa1 li .zda1{ float:left; margin-left:20px; margin-top:20px; border:1px solid #CCC; width:200px; height:20px;}
+.dsa1 li .zda2{ float:left; margin-left:210px; margin-top:20px;}
+.dsa1 li .zda3{ float:left; margin-left:20px; margin-top:20px; border:1px solid #CCC; width:200px; height:20px;}
+.dsa1 li .vc{ float:left; margin-left:250px; margin-top:20px; background-color:#C36;}
+.dsa1 li .vcc{ float:left; margin-left:100px; margin-top:20px; background-color:#C36;}
+.dsa .m{ margin-top:20px;}
+.dsa .mm{margin-top:20px;}
+.dsa .mmm{margin-top:10px; color:#F00; margin-left:100px;}
+.dsa .mmm1{margin-top:10px; color:#F00; margin-left:200px;}
+.dsa .mmm2{margin-top:10px; color:#F00; margin-left:210px;}
+/*--多卡提货--*/
+.zd .nei{ height:450px; width:700px; }

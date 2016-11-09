@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>day06</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		li{
+			list-style: none;
+		}
+		h3{
+			line-height: 50px;
+			font-size: 25px;
+		}
+		#dest{
+			height: 60px;
+			background: skyblue;
+			padding:30px;
+		}
+		#content{
+			background: yellow;
+			padding-left: 30px;
+			padding-bottom: 50px;
+		}
+		ul li{
+			display: inline;
+			background: blue;
+			color: #fff;
+			line-height: 50px;
+			padding:5px 20px;
+			margin-right: 20px;
+		}
+		#del{
+			width: 150px;
+			height: 150px;
+			color: #fff;
+			background: red;
+			border-radius: 50%;
+			font-size: 30px;
+			font-weight: 900;
+			text-align: center;
+			line-height: 150px;
+			margin:100px auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="dest">
+		<h3>收藏夹</h3>
+		<ul id="dest_menu"></ul>
+	</div>
+	<div id="content">
+	<h3>你可能喜欢的歌曲</h3>
+		
+			<ul id="menu">
+				<li draggable="true" id="m1" ondragstart="save(event)">ppap</li>
+				<li draggable="true" id="m2" ondragstart="save(event)">可惜没如果</li>
+				<li draggable="true" id="m3" ondragstart="save(event)">love</li>
+				<li draggable="true" id="m4" ondragstart="save(event)">社会摇</li>
+				<li draggable="true" id="m5" ondragstart="save(event)">慢摇</li>
+			</ul>
+			<div id="del">垃圾桶</div>
+		
+	</div>
+<script type="text/javascript">
+	function save(e){
+		e.dataTransfer.setData("text/plain",e.target.id);
+	}
+	var del=document.getElementById("del");
+	var menu=document.getElementById("menu");
+	del.addEventListener("drop",function(e){
+        var id=e.dataTransfer.getData("text/plain");
+        var c=document.getElementById(id);
+        menu.removeChild(c);
+       
+	},false);
+	var dest=document.getElementById("dest");
+	var dest_menu=document.getElementById("dest_menu");
+	dest.addEventListener("drop",function(e){
+      var id=e.dataTransfer.getData("text/plain");
+      var c=document.getElementById(id);
+        dest_menu.appendChild(c);
+       
+	},false)
+	document.ondragend =function(e){e.preventDefault();}
+	document.ondragover =function(e){e.preventDefault();}
+</script>
+</body>
+</html>

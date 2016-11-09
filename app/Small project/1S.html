@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>前世今生</title>
+	<script type="text/javascript">
+		var lastname = ["赵","钱","孙","李","周","吴","郑","王","郭","廖","黎","何","欧阳","胡","蔡","党","张","户"];
+
+		var firstname = ["赵世昌","钱贸","孙子","李元吉","周娜","吴邪","郑动","王阳明","郭靖","廖荣囧","黎明","何以琛","欧阳烨","胡歌","蔡集","党--","张--","户淦"];
+		
+		while(true){
+			var result =prompt("请输入您的姓名，退出请输入esc");
+			var per = "";
+			if(result == "esc") {
+				break;
+			}
+
+			if(result.length==0||result.length==1||result.length>4){
+			 	alert("请输入正确的姓名！");
+			 	continue;
+			}
+			var index=parseInt(Math.random()*firstname.length);
+			alert("您前世的名字是："+per+firstname[index]);		
+		}
+		alert("欢迎您再次使用");
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

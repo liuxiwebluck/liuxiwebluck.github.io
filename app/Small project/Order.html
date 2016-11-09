@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜单拖放</title>
+<style>
+	aside{
+		border:4px dotted #09F;
+		width:22%;
+		height:600px;
+		float:left;}
+	aside ul li img{
+		width:70px;
+		height:70px;
+		}
+	aside ul li{
+		list-style:none;
+		padding:10px;}
+	aside ul li:hover{
+		background-color:#09F;}
+	article{
+		border:4px solid #0F0;
+		width:50%;
+		height:600px;
+		float:left;
+		margin-left:20px;}
+	article ul li img{
+		width:100px;
+		height:100px;
+	}
+	
+	article ul li{
+		list-style:none;
+		padding:10px;
+		float:left;
+		width:100px;
+		height:100px;}
+		
+	article ul li:hover{
+		background-color:#09F;}
+</style>
+</head>
+
+<body>
+	<aside>
+    	<h1>今日菜单</h1>
+    	<ul id="ul2">
+        	<li draggable="true" id="li1"><img src="../day06/images/1.jpg">山楂炖蹄胖</li>
+        	<li draggable="true" id="li2"><img src="../day06/images/2.jpg">腊八粥</li>
+        	<li draggable="true" id="li3"><img src="../day06/images/3.jpg">银鱼蒸蛋</li>
+        	<li draggable="true" id="li4"><img src="../day06/images/4.jpg">梅花糕</li>
+        	<li draggable="true" id="li5"><img src="../day06/images/5.jpg">爱心蛋卷</li>
+        </ul>
+    </aside>
+    <article>
+    	<h1>点菜</h1>
+        <ul id="ul1"></ul>
+    </article>
+    <script>
+    	var lis=document.getElementsByTagName("li");
+		var article=document.getElementsByTagName("article");
+		var ul1=document.getElementById("ul1");
+		var aside=document.getElementsByTagName("aside");
+		var ul2=document.getElementById("ul2");
+		for(var i=0;i<lis.length;i++){
+			lis[i].index=i;
+			lis[i].ondragstart=function(event){
+				
+			var data=event.dataTransfer;
+			data.effectAllowed="copy";
+			//console.log(this.index);
+			/*var img=new Image();
+			img.src=this.index+1+".jpg";
+			data.setDragImage(img,50,50);
+				*/
+				
+			data.setData("text/plain",this.id);
+				}	
+		}
+		
+		article[0].ondrop=function(event){
+			 event.preventDefault();
+		     event.stopPropagation();
+			 
+			 var data=event.dataTransfer;
+			 var id=data.getData("text/plain");
+			 var id_dom=document.getElementById(id);
+			 
+			 ul1.appendChild(id_dom);
+		}
+
+
+
+
+
+	
+		aside[0].ondrop=function(event){
+			 event.preventDefault();
+		     event.stopPropagation();
+			 
+			 var data=event.dataTransfer;
+			 var id=data.getData("text/plain");
+			 var id_dom=document.getElementById(id);
+			 
+			 ul2.appendChild(id_dom);
+		}
+		
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

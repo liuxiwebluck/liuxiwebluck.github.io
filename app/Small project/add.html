@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>click</title>
+	<style type="text/css">
+		ul{margin:0;padding:0;}
+		ul li{ list-style: none }
+		ul{border:1px solid #ccc;overflow: hidden;}
+		li{border:1px solid #ccc; width: 100px; height: 100px; float: left;margin: 10px; text-align: center;}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var lis=document.getElementsByTagName("li");
+			var ul=document.getElementsByTagName("ul")[0];
+			var btns=document.getElementsByTagName("button");
+			lis=Array.prototype.slice.call(lis,0);
+		
+		lis.forEach(function(item){
+			item.onmouseenter = function(){
+				this.style.backgroundColor="#ddd";
+			};
+			item.onmouseleave = function(){
+				this.style.backgroundColor="";
+			};
+		});
+		var num=0;
+		btns[0].onclick=function(){
+			var newLi=document.createElement("li");
+			newLi.innerText="newItem"+(++num);
+			ul.appendChild(newLi);
+			newLi.onmouseenter=function(){
+				this.style.backgroundColor="#ddd";
+				newLi.onmouseleave=function(){this.style.backgroundColor="";}
+			}
+          
+
+		}
+		}
+	</script>
+</head>
+<body>
+<button>添加</button>
+	<ul>
+	<li>item1</li>
+	<li>item2</li>
+	<li>item3</li>
+	</ul>
+</body>
+</html>
